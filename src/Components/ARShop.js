@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Item from './item'
 import '../Components/ARShop.css'
+import { cartItems } from './item'
 
 export default function ARShop(props) {
   var count = 0
