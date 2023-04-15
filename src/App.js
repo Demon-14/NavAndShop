@@ -10,6 +10,7 @@ import Option from './Components/option';
 import Funzone from './Components/funzone';
 import Foodcourt from './Components/foodcourt';
 import ShopOptions from './Components/shop-options';
+import QRPage from './Components/qr-page';
 import {
   BrowserRouter as Router,
   Routes,
@@ -66,6 +67,7 @@ function App() {
       <Route exact path='/foodcourt' element={<Foodcourt/>}></Route>
       <Route exact path='/buy-game-tickets' element={<BuyGameTickets items = {games}/>}></Route>
       <Route exact path='/shop-options' element={<ShopOptions/>}></Route>
+      <Route exact path='/qr-page' element={<QRPage/>}></Route>
     </Routes>
     </Router>
     </>
