@@ -8,6 +8,7 @@ var car = {1 : 0, 2 : 0, 3 : 0}
 export default function ARShop(props) {
   const [cartItems,setCart]=useState(car);
   const [val,setVal]=useState(0)
+  car=cartItems
   var count = 0
   for (const prop in cartItems) {
     count += cartItems[prop];
@@ -28,3 +29,4 @@ export default function ARShop(props) {
     </>
   )
 }
+export {car}

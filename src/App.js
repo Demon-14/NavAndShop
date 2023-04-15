@@ -70,7 +70,7 @@ function App() {
       <Route exact path='/buy-game-tickets' element={<BuyGameTickets items = {games}/>}></Route>
       <Route exact path='/shop-options' element={<ShopOptions/>}></Route>
       <Route exact path='/qr-page' element={<QRPage/>}></Route>
-      <Route exact path='/cart' element={<Cart/>}></Route>
+      <Route exact path='/cart' element={<Cart items={list}/> }></Route>
     </Routes>
     </Router>
     </>
