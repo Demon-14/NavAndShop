@@ -3,19 +3,28 @@ import image from '../images/item.png'
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
 
+var cartItems = {1 : 10, 2 : 0, 3 : 0}
 
 const Item=(props)=>{
+
+  
   const [val,setVal]=useState(1)
   const Addbtn=(event)=>{
     // console.log(document.getElementById(event.target.id))
     document.getElementById(event.target.id).style.display='none'
     document.getElementById(`a${event.target.id}`).style.display='block'
+    cartItems[props.data.id] += 1
+    console.log(cartItems)
   }
-  const addVal=()=>{
+  const addVal=(event)=>{
     setVal(val+1)
+    cartItems[props.data.id] += 1
+    console.log(cartItems)
   }
   const subVal=(event)=>{
     setVal(val-1)
+    cartItems[props.data.id] -= 1
+    console.log(cartItems)
   }
   return (
     <div>
@@ -33,4 +42,5 @@ const Item=(props)=>{
 </div>
   )
 }
+export {cartItems}
 export default Item
