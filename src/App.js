@@ -17,6 +17,19 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const list=[{
+    name:'Pants',
+    price:'100'
+  },
+  {
+    name:'Shirt',
+    price:'200'
+  },
+  {
+    name:'jeans',
+    price:'300'
+  },
+  ]
   return (
     <>
     <Router>
@@ -24,7 +37,7 @@ function App() {
     <Routes>
       <Route exact path='/home' element={<Home/>}></Route>
       <Route exact path='/navigation' element={<Navigation/>}></Route>
-      <Route exact path='/arshop' element={<ARShop/>}></Route>
+      <Route exact path='/arshop' element={<ARShop items={list}/>}></Route>
       <Route exact path='/about' element={<About/>}></Route>
       <Route exact path='/contact' element={<Contact/>}></Route>
       <Route exact path='/option' element={<Option/>}></Route>
