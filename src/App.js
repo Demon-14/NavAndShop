@@ -71,6 +71,7 @@ function App() {
       <Route exact path='/shop-options' element={<ShopOptions/>}></Route>
       <Route exact path='/qr-page' element={<QRPage/>}></Route>
       <Route exact path='/cart' element={<Cart items={list}/> }></Route>
+      <Route exact path='/map'></Route>
     </Routes>
     </Router>
     </>
