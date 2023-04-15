@@ -4,7 +4,8 @@ import Item from './item'
 export default function ARShop(props) {
   return (
     <>
-    <div>ARShop</div>
+    <div></div>
+
     <div className='container d-flex'>
     {props.items.map((item)=>{
       return(
