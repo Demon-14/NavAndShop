@@ -15,7 +15,7 @@ export default function Option() {
   const location = useLocation()
   const { c } = location.state
   console.log(c)
-  const flags = [{"key": '1abc', "funzone" : 1, "food" : 0, "shop" : 1}, 
+  const flags = [{"key": '1abc', "funzone" : 1, "food" : 1, "shop" : 1}, 
                  {"key": '2abc', "funzone" : 0, "food" : 1, "shop" : 1}]
   // console.log(flags[0]["key"])
   flags.map((i)=>{
