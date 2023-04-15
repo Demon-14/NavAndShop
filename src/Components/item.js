@@ -3,10 +3,9 @@ import image from '../images/item.png'
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
 
-var cartItems = {1 : 10, 2 : 0, 3 : 0}
+var cartItems = {1 : 0, 2 : 0, 3 : 0}
 
 const Item=(props)=>{
-
   
   const [val,setVal]=useState(1)
   const Addbtn=(event)=>{
