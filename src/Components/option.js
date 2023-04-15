@@ -31,7 +31,7 @@ export default function Option() {
       <div className='wrapper-option'>
         {var1===1?<button className="submit-button-game" type='submit' ><Link to='/funzone'>Funzone</Link></button>:console.log("hi")}
         {var2===1?<button className="submit-button-food" type='submit' ><Link to='/foodcourt'>Food</Link></button>:console.log("hi")}
-        {var3===1?<button className="submit-button-shop" type='submit' ><Link to='/contact'>Shop</Link></button>:console.log("hi")}     
+        {var3===1?<button className="submit-button-shop" type='submit' ><Link to='/shop-options'>Shop</Link></button>:console.log("hi")}     
       </div>
     </div>
   )

@@ -7,14 +7,16 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Home from './Components/home';
 import Option from './Components/option';
-import Funzone from './Components/funzone'
+import Funzone from './Components/funzone';
 import Foodcourt from './Components/foodcourt';
+import ShopOptions from './Components/shop-options';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link
 } from "react-router-dom";
+import BuyGameTickets from './Components/buy-game-tickets';
 
 function App() {
   const list=[{
@@ -33,6 +35,22 @@ function App() {
     price:'300'
   }
   ]
+  const games=[{
+    id:1,
+    name:'bowling',
+    price:'100/20shots'
+  },
+  {
+    id:2,
+    name:'air hockey',
+    price:'100 for 30mins'
+  },
+  {
+    id:3,
+    name:'snooker',
+    price:'200 for 30mins'
+  }
+  ]
   return (
     <>
     <Router>
@@ -46,6 +64,8 @@ function App() {
       <Route exact path='/option' element={<Option/>}></Route>
       <Route exact path='/funzone' element={<Funzone/>}></Route>
       <Route exact path='/foodcourt' element={<Foodcourt/>}></Route>
+      <Route exact path='/buy-game-tickets' element={<BuyGameTickets items = {games}/>}></Route>
+      <Route exact path='/shop-options' element={<ShopOptions/>}></Route>
     </Routes>
     </Router>
     </>
