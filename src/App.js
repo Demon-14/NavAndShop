@@ -18,17 +18,20 @@ import {
 
 function App() {
   const list=[{
+    id:1,
     name:'Pants',
     price:'100'
   },
   {
+    id:2,
     name:'Shirt',
     price:'200'
   },
   {
+    id:3,
     name:'jeans',
     price:'300'
-  },
+  }
   ]
   return (
     <>
