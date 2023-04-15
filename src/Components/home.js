@@ -12,7 +12,7 @@ export default function home() {
       <h3 className='tagline'>Navigate, Try and Shop.</h3>
       <h4 className='mall-code'>enter mallcode</h4>
       <input type="text" className="mall-code-input" />
-      <button className="submit-button" type='submit' ><Link to='/contact'>Submit</Link></button>
+      <button className="submit-button" type='submit' ><Link to='/option'>Submit</Link></button>
     </div>
   )
 }

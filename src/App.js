@@ -8,6 +8,7 @@ import Contact from './Components/Contact';
 import Home from './Components/home';
 import Option from './Components/option';
 import Funzone from './Components/funzone'
+import Foodcourt from './Components/foodcourt';
 import {
   BrowserRouter as Router,
   Routes,
@@ -26,8 +27,9 @@ function App() {
       <Route exact path='/arshop' element={<ARShop/>}></Route>
       <Route exact path='/about' element={<About/>}></Route>
       <Route exact path='/contact' element={<Contact/>}></Route>
-      <Route exact path='/options' element={<Option/>}></Route>
+      <Route exact path='/option' element={<Option/>}></Route>
       <Route exact path='/funzone' element={<Funzone/>}></Route>
+      <Route exact path='/foodcourt' element={<Foodcourt/>}></Route>
     </Routes>
     </Router>
     </>

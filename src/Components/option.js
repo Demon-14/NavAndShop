@@ -12,7 +12,7 @@ export default function option() {
     <div>
       <div className='wrapper-option'>
       <button className="submit-button-game" type='submit' ><Link to='/funzone'>Funzone</Link></button>
-      <button className="submit-button-food" type='submit' ><Link to='/contact'>Food</Link></button>
+      <button className="submit-button-food" type='submit' ><Link to='/foodcourt'>Food</Link></button>
       <button className="submit-button-shop" type='submit' ><Link to='/contact'>Shop</Link></button>
       </div>
     </div>
