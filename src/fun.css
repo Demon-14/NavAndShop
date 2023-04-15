@@ -1,0 +1,32 @@
+.wrapper-fun{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fun-nav{
+    background-color:rgba(0, 0,0, 0);
+    border-radius : 10px;
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-bottom: 5px solid crimson;
+    text-decoration: none;
+    outline: none;
+}
+
+.fun-buy{
+    background-color:rgba(0, 0,0, 0);
+    border-radius : 10px;
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-bottom: 5px solid crimson;
+    text-decoration: none;
+    outline: none;
+}
