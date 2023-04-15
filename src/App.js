@@ -12,6 +12,7 @@ import Foodcourt from './Components/foodcourt';
 import ShopOptions from './Components/shop-options';
 import QRPage from './Components/qr-page';
 import Cart from './Components/cart';
+
 import {
   BrowserRouter as Router,
   Routes,
