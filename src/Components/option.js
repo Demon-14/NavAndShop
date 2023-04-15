@@ -1,19 +1,37 @@
 import React from 'react'
 import './options.css'
+import { useLocation } from 'react-router-dom'
+
 import {
     BrowserRouter as Router,
     Routes,
     Route,
     Link
   } from "react-router-dom";
-export default function option() {
-
+let var1 = 0;
+let var2 = 0;
+let var3 = 0;
+export default function Option() {
+  const location = useLocation()
+  const { c } = location.state
+  console.log(c)
+  const flags = [{"key": '1abc', "funzone" : 1, "food" : 0, "shop" : 1}, 
+                 {"key": '2abc', "funzone" : 0, "food" : 1, "shop" : 1}]
+  // console.log(flags[0]["key"])
+  flags.map((i)=>{
+    if(c === i["key"]){
+      var1 = i["funzone"]
+      var2 = i["food"]
+      var3 = i["shop"]
+    }
+  })
+  console.log(var1, var2, var3)
   return (
     <div>
       <div className='wrapper-option'>
-      <button className="submit-button-game" type='submit' ><Link to='/funzone'>Funzone</Link></button>
-      <button className="submit-button-food" type='submit' ><Link to='/foodcourt'>Food</Link></button>
-      <button className="submit-button-shop" type='submit' ><Link to='/contact'>Shop</Link></button>
+        {var1===1?<button className="submit-button-game" type='submit' ><Link to='/funzone'>Funzone</Link></button>:console.log("hi")}
+        {var2===1?<button className="submit-button-food" type='submit' ><Link to='/foodcourt'>Food</Link></button>:console.log("hi")}
+        {var3===1?<button className="submit-button-shop" type='submit' ><Link to='/contact'>Shop</Link></button>:console.log("hi")}     
       </div>
     </div>
   )
