@@ -1,6 +1,17 @@
-.card {
+.cardLogin, .bg{
     /* background:linear-gradient(120deg,#099a6a,#8e44ad); */
     background-image: url("https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .funbg{
+    background-image: url('../images/bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

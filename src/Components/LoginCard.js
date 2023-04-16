@@ -22,7 +22,7 @@ const LoginCard = () => {
       }
     }
 
-    return (<div className="card">
+    return (<div className="cardLogin">
         <div className="center">
       <h1>Sign-up !</h1>
         <div className="txt_field">

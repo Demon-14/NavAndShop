@@ -1,9 +1,10 @@
 import React from 'react'
 import '../fun.css'
 import { Link } from 'react-router-dom'
+import '../fun.css'
 function ShopOptions() {
   return (
-    <div>
+    <div className='funbg'>
         <div className='dropdown'>
         <label className='brands'>
             <h5>Select Outlet.</h5>
@@ -15,8 +16,8 @@ function ShopOptions() {
         </label>
         </div>
         <div className="wrapper-fun">
-      <button className='fun-buy'><Link to='/ARShop'>Purchase</Link></button>
-      <button className='fun-nav'>Navigate</button>
+      <button className='fun-buy'><Link to='/ARShop' style={{textDecoration : 'none','color':'black'}}>Purchase</Link></button>
+      <button className='fun-nav'><Link to = '/Navigation' style={{textDecoration : 'none','color':'black'}}>Navigate</Link></button>
       </div>
 
     </div>

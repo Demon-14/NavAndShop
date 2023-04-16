@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import Item from './item'
 import '../Components/ARShop.css'
 import { Link } from 'react-router-dom'
+import '../fun.css'
 
 var car = {1 : 0, 2 : 0, 3 : 0}
 export default function ARShop(props) {
@@ -14,7 +15,7 @@ export default function ARShop(props) {
     count += cartItems[prop];
   }
   return (
-    <>
+    <div className='funbg'>
     <Link to='/cart' style={{'position':'relative','left':'1470px'}}><i className="fa" style={{'font-size':'30px'}}>&#xf07a;</i>
 <span className='badge badge-warning' id='lblCartCount'>{val}</span></Link>
     <div className='container d-flex'>
@@ -26,7 +27,7 @@ export default function ARShop(props) {
       )
     })}
     </div>
-    </>
+    </div>
   )
 }
 export {car}
