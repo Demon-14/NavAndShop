@@ -27,6 +27,9 @@ export default function Navbar() {
         <li className="nav-item">
           <Link className="nav-link" to="/contact">ContactUs</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/LoginCard">Login</Link>
+        </li>
       </ul>
     </div>
   </div>

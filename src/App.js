@@ -12,6 +12,7 @@ import Foodcourt from './Components/foodcourt';
 import ShopOptions from './Components/shop-options';
 import QRPage from './Components/qr-page';
 import Cart from './Components/cart';
+import LoginCard from './Components/LoginCard';
 
 import {
   BrowserRouter as Router,
@@ -72,6 +73,7 @@ function App() {
       <Route exact path='/qr-page' element={<QRPage/>}></Route>
       <Route exact path='/cart' element={<Cart items={list}/> }></Route>
       <Route exact path='/map'></Route>
+      <Route exact path='/LoginCard' element={<LoginCard/>}></Route>
     </Routes>
     </Router>
     </>
