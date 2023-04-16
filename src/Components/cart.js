@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import CartItem from './cartItem'  
 import {car} from './ARShop'
 
@@ -16,7 +16,7 @@ export default function Cart(props) {
         car[item.id]!=0?<CartItem data={item} cartItem={car} total={sum}/>:console.log("hi")
         )
     })}
-    <button className='mx-3 btn btn-primary'>{`Pay:${sum}`}</button>
+    <button className='mx-3 btn btn-primary'><Link to = '/qr-page'>{`Pay:${sum}`}</Link></button>
     </>
   )
 }
