@@ -1,7 +1,19 @@
 import React from 'react'
+import { Route } from 'react-router'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Link
+} from "react-router-dom";
+// import '../Components/nav.css'
 
-export default function Navigation() {
-  return (
-    <div>Navigation</div>
-  )
-}
+export default function Navigation(){
+    return (
+      <>
+      <div className='container mx-4 my-3' style={{'height':'80vh','width':'80vw'}}>
+        <iframe id="serviceFrameSend" src="https://api.mazemap.com/js/v2.0.94/docs/examples/iframe-fiddles/basic-kiosk-solution/app.html" width="1450" height="600"  frameborder="0"/>
+        </div>
+    </>
+    );
+  }
+
