@@ -1,20 +1,23 @@
 import React from "react";
 import "./login.css";
+import { data } from "jquery";
 const LoginCard = () => {
   const [username, setUsername] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [pwd, setPassword] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [ConfirmPassword, setConfirmPassword] = React.useState("");
   const [match, setMatch] = React.useState(true);
 
   function handleClick(event) {
-    if (password === ConfirmPassword) {
-      const dataTemp = { username, email, password };
-      fetch("http://localhost:8000/sign-up", {
+    if (pwd === ConfirmPassword) {
+      console.log("hi");
+      const dataTemp = { username, email, pwd };
+      fetch("http://localhost:5000/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataTemp),
       });
+      console.log(dataTemp);
       setMatch(true);
     } else {
       setMatch(false);
@@ -51,7 +54,7 @@ const LoginCard = () => {
           <input
             type="password"
             required
-            value={password}
+            value={pwd}
             onChange={(event) => setPassword(event.target.value)}
           />
         </div>
