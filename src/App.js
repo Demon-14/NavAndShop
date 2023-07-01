@@ -58,9 +58,9 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route exact path="/home" element={<Home />}></Route>
-          <Route exact path="" element={<Home></Home>}></Route>
-          <Route exact path="/landing" element={<Landing />}></Route>
+          <Route exact path="/home" element={<Landing />}></Route>
+          <Route exact path="" element={<Landing></Landing>}></Route>
+          <Route exact path="/mallcode" element={<Home />}></Route>
           <Route exact path="/navigation" element={<Navigation />}></Route>
           <Route exact path="/arshop" element={<ARShop items={list} />}></Route>
           <Route exact path="/about" element={<About />}></Route>
