@@ -1,16 +1,16 @@
 .cardLogin, .bg{
     /* background:linear-gradient(120deg,#099a6a,#8e44ad); */
-    background-image: url("https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg");
+    /* background-image: url("https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg"); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
   }
-  .funbg{
+  /* .funbg{
     background-image: url('../images/bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
     overflow: hidden;
-  }
+  } */
   .center {
     position: absolute;
     top: 50%;
@@ -54,11 +54,14 @@
     padding: 0 5px;
     height: 40px;
     font-size: 16px;
-    border: none;
+    /* border: none;  */
+    border-top: 10px;
+    border-left: none;
+    border-right: none;
     background: none;
     outline: none;
   }
-  .txt_field label {
+  /* .txt_field label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -67,7 +70,7 @@
     font-size: 16px;
     pointer-events: none;
     transition: .5s;
-  }
+  } */
   .txt_field span::before {
     content: "";
     position: absolute;
@@ -102,6 +105,7 @@
       display: flex;
       align-items: center;
       margin: auto;
+      margin-top: 5vh;
       justify-content: center;
       height: 50px;
       border-radius: 20px;

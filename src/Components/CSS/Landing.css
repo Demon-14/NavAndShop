@@ -204,7 +204,7 @@ body a {
 }
 
 #section-1 .content-slider .slider .banner .banner-inner-wrapper .learn-more-button {
-    padding-bottom: 5em;
+    /* padding-bottom: 5em; */
     z-index: 15 !important;
 }
 
