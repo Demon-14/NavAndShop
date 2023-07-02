@@ -19,5 +19,6 @@ app.use(
   })
 );
 app.use("/", require("./routes/login"));
+app.use("/", require("./routes/Product"));
 
 app.listen(5000);
