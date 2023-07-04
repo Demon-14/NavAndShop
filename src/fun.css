@@ -35,3 +35,15 @@
     display: flex;
     justify-content: center;
 }
+
+.gender-filter{
+    padding-left: 10px;
+}
+.gender-filter button{
+    background-color: rgba(0, 0,0, 0);
+    padding-left: 10px;
+    margin-left: 10px;
+    border: none;
+    border-bottom: solid 1px;
+    font-size: 1em;
+}
