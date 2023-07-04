@@ -7,7 +7,7 @@ import "../fun.css";
 
 var car = { 1: 0, 2: 0, 3: 0 };
 export default function ARShop(props) {
-  const [activeButton, setactiveButton] = useState("Male");
+  const [activeButton, setactiveButton] = useState("Men");
   const [cartItems, setCart] = useState(car);
   const [val, setVal] = useState(0);
   car = cartItems;
@@ -25,20 +25,45 @@ export default function ARShop(props) {
           {val}
         </span>
       </Link>
-      <button onClick={() => setactiveButton("Men")}>Men</button>
-      <button onClick={() => setactiveButton("Women")}>Women</button>
-      <button onClick={() => setactiveButton("Children")}>Children</button>
+      <div className="gender-filter">
+        <button onClick={() => setactiveButton("Men")}>Men</button>
+        <button onClick={() => setactiveButton("Women")}>Women</button>
+        <button onClick={() => setactiveButton("Children")}>Children</button>
+      </div>
       <div className="container d-flex">
         {props.items.map((item) => {
+          {
+            /* console.log(item.Gender); */
+          }
           return (
             <>
-              <Item
-                data={item}
-                val={val}
-                setVal={setVal}
-                cartItems={cartItems}
-                setCart={setCart}
-              />
+              {activeButton == "Men" && item.Gender == "Men" && (
+                <Item
+                  data={item}
+                  val={val}
+                  setVal={setVal}
+                  cartItems={cartItems}
+                  setCart={setCart}
+                />
+              )}
+              {activeButton == "Women" && item.Gender == "Women" && (
+                <Item
+                  data={item}
+                  val={val}
+                  setVal={setVal}
+                  cartItems={cartItems}
+                  setCart={setCart}
+                />
+              )}
+              {activeButton == "Children" && item.Gender == "Children" && (
+                <Item
+                  data={item}
+                  val={val}
+                  setVal={setVal}
+                  cartItems={cartItems}
+                  setCart={setCart}
+                />
+              )}
             </>
           );
         })}
