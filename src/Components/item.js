@@ -24,8 +24,8 @@ const Item = (props) => {
     // console.log(cartItems)
   };
   return (
-    <div>
-      <div class="card my-3 mx-3" style={{ width: "18rem" }}>
+    <div class="card-wrapper">
+      <div class="card">
         <img src={image} class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">{props.data.name}</h5>
@@ -34,7 +34,7 @@ const Item = (props) => {
           <p class="card-text">Colour:{props.data.Colour}</p>
           <button
             id={`addcart${props.data.id}`}
-            className="btn btn-primary"
+            className="btn"
             onClick={Addbtn}
           >
             Add to cart
