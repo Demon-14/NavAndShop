@@ -1,26 +1,32 @@
-import React, { useState } from "react";
+import React, { useContext,useState,useEffect } from "react";
 import image from "../images/item.png";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
 import "./CSS/Item.css";
+import {Cart} from '../Context/cart'
+// import {car} from './ARShop'
 
 const Item = (props) => {
+  const {cartItems, setCart} = useContext(Cart);
   const Addbtn = (event) => {
     // console.log(document.getElementById(event.target.id))
     document.getElementById(event.target.id).style.display = "none";
     document.getElementById(`a${event.target.id}`).style.display = "block";
-    props.cartItems[props.data.id] += 1;
-    props.setVal(props.val + 1);
+    cartItems[props.data.id]=1
+    setCart(cartItems);
+    // props.setVal(props.val + 1);
     // console.log(cartItems)
   };
   const addVal = (event) => {
-    props.cartItems[props.data.id] += 1;
-    props.setVal(props.val + 1);
+    cartItems[props.data.id]+=1
+    console.log(cartItems)
+    setCart(cartItems);
+    // props.setVal(props.val + 1);
     // console.log(cartItems)
   };
   const subVal = (event) => {
-    props.setVal(props.val - 1);
-    props.cartItems[props.data.id] -= 1;
+    // props.setVal(props.val - 1);
+    cartItems[props.data.id] -= 1;
     // console.log(cartItems)
   };
   return (
@@ -43,7 +49,7 @@ const Item = (props) => {
             <button className="btn btn-primary">
               <AiOutlineMinus onClick={subVal} />
             </button>
-            {props.cartItems[props.data.id]}
+            {cartItems[props.data.id]}
             <button className="btn btn-primary">
               <AiOutlinePlus onClick={addVal} />
             </button>

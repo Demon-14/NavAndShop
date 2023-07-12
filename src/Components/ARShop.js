@@ -4,17 +4,18 @@ import Item from "./item";
 import "../Components/ARShop.css";
 import { Link } from "react-router-dom";
 import "../fun.css";
+import {Cart} from '../Context/cart'
 
-var car = { 1: 0, 2: 0, 3: 0 };
+// var car = { 1: 0, 2: 0, 3: 0 };
 export default function ARShop(props) {
   const [activeButton, setactiveButton] = useState("Men");
-  const [cartItems, setCart] = useState(car);
+  const {cartItems, setCart} = useContext(Cart);
   const [val, setVal] = useState(0);
-  car = cartItems;
   var count = 0;
   for (const prop in cartItems) {
     count += cartItems[prop];
   }
+  // car = cartItems;
   return (
     <div className="funbg">
       <Link to="/cart" style={{ position: "relative", left: "1470px" }}>
@@ -33,7 +34,8 @@ export default function ARShop(props) {
       <div className="container d-flex">
         {props.items.map((item) => {
           {
-            /* console.log(item.Gender); */
+            //  console.log(item.Gender); 
+            return(<Item data={item} />)
           }
           return (
             <>
@@ -71,4 +73,3 @@ export default function ARShop(props) {
     </div>
   );
 }
-export { car };

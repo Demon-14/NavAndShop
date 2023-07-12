@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import CartItem from './cartItem'  
-import {car} from './ARShop'
+// import {car} from './ARShop'
 import '../Components/ARShop.css'
-
+var car = { 1: 0, 2: 0, 3: 0 };
 export default function Cart(props) {
     var sum=0
     props.items.map((item)=>{
