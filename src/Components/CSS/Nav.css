@@ -1,5 +1,5 @@
 .navbar-nav li {
-    list-style-type: none!important;
+    list-style-type: none !important;
     padding: 0!important;
     display: flex!important;
     flex-direction: row!important;
@@ -17,11 +17,12 @@
 .navbar .navbar-nav{
     margin:  auto;
     font-size: 1.25em;
+    color: white !important;
     /* padding: 100; */
 }
 
-.navbar .nav-item a{
-    color: white!important;
+.navbar .nav-item {
+    color: white !important;
     font-weight: 200;
 }
 
