@@ -11,6 +11,7 @@ export default function ARShop(props) {
   const [activeButton, setactiveButton] = useState("Men");
   const {cartItems, setCart} = useContext(Cart);
   const [val, setVal] = useState(0);
+
   var count = 0;
   for (const prop in cartItems) {
     count += cartItems[prop];
@@ -23,7 +24,7 @@ export default function ARShop(props) {
           &#xf07a;
         </i>
         <span className="badge badge-warning" id="lblCartCount">
-          {val}
+          {count}
         </span>
       </Link>
       <div className="gender-filter">

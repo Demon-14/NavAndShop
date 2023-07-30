@@ -40,21 +40,7 @@ function App() {
       price: "300",
       Gender: "Children",
       Colour: "Black",
-    },
-    {
-      id: 4,
-      name: "Tee",
-      price: "300",
-      Gender: "Children",
-      Colour: "Black",
-    },
-    {
-      id: 4,
-      name: "Diaper",
-      price: "300",
-      Gender: "Children",
-      Colour: "Black",
-    },
+    }
   ];
   const games = [
     {

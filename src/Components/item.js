@@ -9,25 +9,19 @@ import {Cart} from '../Context/cart'
 const Item = (props) => {
   const {cartItems, setCart} = useContext(Cart);
   const Addbtn = (event) => {
-    // console.log(document.getElementById(event.target.id))
     document.getElementById(event.target.id).style.display = "none";
     document.getElementById(`a${event.target.id}`).style.display = "block";
     cartItems[props.data.id]=1
-    setCart(cartItems);
-    // props.setVal(props.val + 1);
-    // console.log(cartItems)
+    setCart({1:cartItems[1],2:cartItems[2],3:cartItems[3]});
   };
   const addVal = (event) => {
     cartItems[props.data.id]+=1
     console.log(cartItems)
-    setCart(cartItems);
-    // props.setVal(props.val + 1);
-    // console.log(cartItems)
+    setCart({1:cartItems[1],2:cartItems[2],3:cartItems[3]});
   };
   const subVal = (event) => {
-    // props.setVal(props.val - 1);
     cartItems[props.data.id] -= 1;
-    // console.log(cartItems)
+    setCart({1:cartItems[1],2:cartItems[2],3:cartItems[3]});
   };
   return (
     <div class="card-wrapper">
