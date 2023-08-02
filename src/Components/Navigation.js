@@ -11,11 +11,16 @@ import './login.css'
 export default function Navigation(){
     return (
       <>
-      <div className="bg">
-      <div className='container mx-4 my-3 navcss' style={{'height':'80vh','width':'80vw'}}>
+      <div className="bg ">
+      <div className='container mx-4 my-3 navcss' style={{'height':'90vh','width':'100vw'}}>
         <iframe id="serviceFrameSend" src="https://api.mazemap.com/js/v2.0.94/docs/examples/iframe-fiddles/basic-kiosk-solution/app.html" width="1450" height="600"  frameborder="0"/>
         </div>
         </div>
+        <style>
+          {`body{
+           overflow:hidden; 
+          }`}
+        </style>
     </>
     );
   }

@@ -26,7 +26,7 @@ const Item = (props) => {
   return (
     <div class="card-wrapper">
       <div class="card">
-        <img src={image} class="card-img-top" alt="..." />
+        <img src={image} class="h-80 card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">{props.data.name}</h5>
           <p class="card-text">Price:{props.data.price}</p>

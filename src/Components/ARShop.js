@@ -10,6 +10,7 @@ import Cartitem from "./cartItem";
 
 // var car = { 1: 0, 2: 0, 3: 0 };
 export default function ARShop(props) {
+  var sum=0
   const [activeButton, setactiveButton] = useState("Men");
   const { cartItems, setCart } = useContext(Cart);
   const [val, setVal] = useState(0);
@@ -21,7 +22,7 @@ export default function ARShop(props) {
   }
   // car = cartItems;
   return (
-    <div className="funbg">
+    <div className="funbg" style={{'height':'91vh',overflow:'hidden'}}>
       <div
         onClick={() => setShow(!show)}
         style={{ cursor: "pointer", position: "relative", left: "1470px" }}
@@ -135,7 +136,10 @@ export default function ARShop(props) {
                           Subtotal
                         </p>
                         <p className="text-base leading-none text-gray-800">
-                          $9,000
+                        {props.items.map((item) => {
+                          sum+=cartItems[item.id]*item.price;
+                      })}
+                        ${sum}
                         </p>
                       </div>
                       <div className="flex items-center justify-between pt-5">
@@ -161,7 +165,7 @@ export default function ARShop(props) {
                           Total
                         </p>
                         <p className="text-2xl font-bold leading-normal text-right text-gray-800">
-                          $10,240
+                          ${sum+65}
                         </p>
                       </div>
                       <button
