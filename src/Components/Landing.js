@@ -1,6 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import "./CSS/Landing.css";
+import { Link } from "react-router-dom";
 const Landing = () => {
   //   function bannerSwitcher() {
   //     var next = $(".sec-1-input:checked").next(".sec-1-input");
@@ -39,7 +40,13 @@ const Landing = () => {
               <h1>Welcome to Nav&Shop</h1>
               <div class="line"></div>
               <div class="learn-more-button">
-                <a href="#section-2">Learn More</a>
+                <Link
+                  className="mall-code-link"
+                  to="/mallcode"
+                  href="#section-1"
+                >
+                  Learn More
+                </Link>
               </div>
             </div>
           </div>

@@ -39,7 +39,7 @@ function App() {
       price: "300",
       Gender: "Children",
       Colour: "Black",
-    }
+    },
   ];
   const games = [
     {
