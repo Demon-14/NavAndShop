@@ -39,7 +39,7 @@ function App() {
       price: "300",
       Gender: "Children",
       Colour: "Black",
-    }
+    },
   ];
   const games = [
     {
@@ -73,6 +73,7 @@ function App() {
           <Route exact path="/option" element={<Option />}></Route>
           <Route exact path="/funzone" element={<Funzone />}></Route>
           <Route exact path="/foodcourt" element={<Foodcourt />}></Route>
+          <Route exact path="/qrpage" element={<QRPage />}></Route>
           <Route
             exact
             path="/buy-game-tickets"

@@ -7,7 +7,6 @@ import "../fun.css";
 import { Cart } from "../Context/cart";
 import Cartitem from "./cartItem";
 
-
 // var car = { 1: 0, 2: 0, 3: 0 };
 export default function ARShop(props) {
   var sum=0
@@ -118,12 +117,12 @@ export default function ARShop(props) {
                   <p className="text-5xl font-black leading-10 text-gray-800 pt-3">
                     Bag
                   </p>
-                  
-                  
-                    {props.items.map((item) => {
-                      return cartItems[item.id]>0?<Cartitem data={item} />:null;
-                      })}
-                  
+
+                  {props.items.map((item) => {
+                    return cartItems[item.id] > 0 ? (
+                      <Cartitem data={item} />
+                    ) : null;
+                  })}
                 </div>
                 <div className="xl:w-1/2 md:w-1/3 xl:w-1/4 w-full bg-gray-100 h-full">
                   <div className="flex flex-col md:h-screen px-14 py-20 justify-between overflow-y-auto">
@@ -169,10 +168,12 @@ export default function ARShop(props) {
                         </p>
                       </div>
                       <button
-                        onClick={() => setShow(!show)}
+                        // onClick={() => setShow(!show)}
                         className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white"
                       >
-                        Checkout
+                        <Link to="/qrpage" cartItems={cartItems}>
+                          Checkout
+                        </Link>
                       </button>
                     </div>
                   </div>
